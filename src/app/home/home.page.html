@@ -1,14 +1,24 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
-</ion-content>
+<ion-app>
+    <ion-header translucent>
+        <ion-toolbar>
+            <ion-title>Browse</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content fullscreen>
+        <ion-card>
+            <img src="../assets/shoes.jpg" />
+            <ion-card-header>
+                <ion-card-subtitle>More than just "Shoes"</ion-card-subtitle>
+                <ion-card-title>Air Jordan</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                Air Jordan is a brand of basketball shoes, athletic, casual, and style clothing produced by Nike. It was created for former NBA player and 5 time NBA MVP Michael Jordan. The original Air Jordan sneakers were produced exclusively for Michael Jordan in
+                early 1984, and released to the public in late 1984. </ion-card-content>
+        </ion-card>
+        <ion-fab vertical="top" horizontal="end" slot="fixed">
+            <ion-fab-button (click)="presentActionSheet()">
+                <ion-icon name="add"></ion-icon>
+            </ion-fab-button>
+        </ion-fab>
+    </ion-content>
+</ion-app>
