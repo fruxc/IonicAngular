@@ -1,10 +1,51 @@
 <ion-app>
     <ion-header translucent>
         <ion-toolbar>
-            <ion-title>Browse</ion-title>
+            <ion-title>Nike Store</ion-title>
         </ion-toolbar>
     </ion-header>
     <ion-content fullscreen>
+        <!-- My Profile -->
+        <ion-card>
+            <img src="../../assets/images.jpg" />
+            <ion-card-header>
+                <ion-card-subtitle>My Profile</ion-card-subtitle>
+                <ion-card-title>Hammad Ansari</ion-card-title>
+            </ion-card-header>
+            <ion-button text-center color="dark">Message</ion-button>
+            <ion-button text-center color="dark">Follow</ion-button>
+            <ion-card>
+                <ion-card-header>Details</ion-card-header>
+                <ion-card-content align-items-center>
+                    <b>fruxc</b><br>
+                    <ion-icon name="pin" href="https://en.wikipedia.org/wiki/Mumbai"></ion-icon>Mumbai
+
+                </ion-card-content>
+            </ion-card>
+        </ion-card>
+        <!-- Trump Profile -->
+        <ion-card>
+            <img src="../../assets/avatar_DonaldTrump.png" />
+            <ion-card-header>
+                <ion-card-subtitle>45<sup>th</sup> President of America</ion-card-subtitle>
+                <ion-card-title>Donald Trump</ion-card-title>
+            </ion-card-header>
+            <ion-card-content align-items-center>
+                Donald John Trump is the 45th and current president of the United States. Before entering politics, he was a businessman and television personality. Trump was born and raised in the New York City borough of Queens, and received a bachelor's degree in
+                economics from the Wharton School.
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-header>
+                Details
+            </ion-card-header>
+            <ion-card-content>
+
+            </ion-card-content>
+        </ion-card>
+
+
+        <!--Shoes-->
         <ion-card>
             <img src="../assets/shoes.jpg" />
             <ion-card-header>
@@ -15,10 +56,11 @@
                 Air Jordan is a brand of basketball shoes, athletic, casual, and style clothing produced by Nike. It was created for former NBA player and 5 time NBA MVP Michael Jordan. The original Air Jordan sneakers were produced exclusively for Michael Jordan in
                 early 1984, and released to the public in late 1984. </ion-card-content>
         </ion-card>
-        <ion-fab vertical="top" horizontal="end" slot="fixed">
+        <ion-fab vertical="bottom" horizontal="end" slot="fixed">
             <ion-fab-button (click)="presentActionSheet()">
                 <ion-icon name="add"></ion-icon>
             </ion-fab-button>
         </ion-fab>
     </ion-content>
+    <ion-button color="dark">Add to cart</ion-button>
 </ion-app>
