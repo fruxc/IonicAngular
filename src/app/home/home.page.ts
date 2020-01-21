@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ActionSheetController } from '@ionic/angular';
+import { FormPage } from '../form/form.page';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +9,7 @@ import { ActionSheetController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-    constructor(public actionSheetController: ActionSheetController) {}
+    constructor(public actionSheetController: ActionSheetController, private router: Router) {}
 
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
@@ -47,5 +49,11 @@ export class HomePage {
       }]
     });
     await actionSheet.present();
+  }
+
+  goToForm() {
+    console.clear();
+    console.log('Button clicked');
+    this.router.navigate(['form']);
   }
 }

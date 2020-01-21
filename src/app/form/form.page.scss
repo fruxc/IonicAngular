@@ -1,0 +1,19 @@
+.btn {
+    background-color: red;
+    /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 25px;
+    padding: 5px;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn:hover {
+    background-color: green;
+}

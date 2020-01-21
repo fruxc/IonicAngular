@@ -7,19 +7,27 @@
     <ion-content fullscreen>
         <!-- My Profile -->
         <ion-card>
-            <img src="../../assets/images.jpg" />
+            <img src="../../assets/PicsArt_07-17-12.03.02.png" />
             <ion-card-header>
                 <ion-card-subtitle>My Profile</ion-card-subtitle>
                 <ion-card-title>Hammad Ansari</ion-card-title>
             </ion-card-header>
-            <ion-button text-center color="dark">Message</ion-button>
-            <ion-button text-center color="dark">Follow</ion-button>
+            <ion-grid>
+                <ion-row>
+                    <ion-col style="display: flex; justify-content: center;">
+                        <ion-button text-center color="dark">Message</ion-button>
+                        <ion-button text-center color="dark">Follow</ion-button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
             <ion-card>
                 <ion-card-header>Details</ion-card-header>
                 <ion-card-content align-items-center>
-                    <b>fruxc</b><br>
-                    <ion-icon name="pin" href="https://en.wikipedia.org/wiki/Mumbai"></ion-icon>Mumbai
-
+                    <b>fruxc</b>
+                    <hr>
+                    <ion-icon name="pin"></ion-icon> Mumbai<br>
+                    <ion-icon name="call"></ion-icon> 9820129695<br>
+                    <ion-icon name="logo-google"></ion-icon> hammadansari17<br>
                 </ion-card-content>
             </ion-card>
         </ion-card>
@@ -61,6 +69,8 @@
                 <ion-icon name="add"></ion-icon>
             </ion-fab-button>
         </ion-fab>
+
+        <ion-button style="display: flex; justify-content: center;" color="dark" (click)="goToForm()">Register Details</ion-button>
     </ion-content>
-    <ion-button color="dark">Add to cart</ion-button>
+    <ion-button style="display: flex; justify-content: center;" color="dark">Add to cart</ion-button>
 </ion-app>
