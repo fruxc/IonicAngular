@@ -59,15 +59,20 @@
                 </ion-item>
 
                 <ion-item>
+                    <ion-label> <b>Date Picker</b></ion-label>
                     <ion-label position="stacked">Date of birth
                         <ion-text color=danger>*</ion-text>
                     </ion-label>
-                    <ion-button (click)="showDatePicker()">
-                        Show Date Picker
-                    </ion-button>
-                    <h4>Date: {{myDate}}</h4>
+                    <ion-input required type="date" (click)="showDatePicker()"></ion-input>
                 </ion-item>
 
+                <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+                    <ion-fab-button (click)="presentActionSheet()">
+                        <ion-icon name="add"></ion-icon>
+                    </ion-fab-button>
+                </ion-fab>
+                <br><br>
+                <ion-button value="cancel" (click)="presentAlertConfirm()">Cancel</ion-button>
                 <button color="red" value="submit" class="btn">Submit</button>
             </ion-list>
         </form>

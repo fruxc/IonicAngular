@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { FormPageRoutingModule } from './form-routing.module';
+import { RouterModule } from '@angular/router';
 
 import { FormPage } from './form.page';
 
@@ -13,6 +14,7 @@ import { FormPage } from './form.page';
     CommonModule,
     FormsModule,
     IonicModule,
+    RouterModule,
     FormPageRoutingModule
   ],
   declarations: [FormPage]
