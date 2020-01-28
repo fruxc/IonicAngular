@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { FormPage } from '../app/form/form.page';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { DatePicker } from '@ionic-native/date-picker/ngx';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
   providers: [
     StatusBar,
     SplashScreen,
+    DatePicker,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

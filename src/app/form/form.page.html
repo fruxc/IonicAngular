@@ -7,24 +7,69 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <form>
-        <ion-item>
-            <ion-label>Name: </ion-label>
-            <ion-input type="text" aria-placeholder="Enter Name"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label>Email: </ion-label>
-            <ion-input type="email" aria-placeholder="Enter Email"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label>Contact: </ion-label>
-            <ion-input type="number" aria-placeholder="Enter Contact"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label>Date of Birth: </ion-label>
-            <ion-input type="date"></ion-input>
-        </ion-item>
-        <button color="red" value="submit" class="btn">Submit</button>
-    </form>
+<ion-content fullscreen>
+    <div class="ion-padding">
+        <form>
+            <ion-list lines="full" class="ion-no-margin ion-no-padding">
+                <ion-item>
+                    <ion-label position="stacked">First Name:
+                        <ion-text color=danger>*</ion-text>
+                    </ion-label>
+                    <ion-input required type="text" placeholder="Enter Name"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="stacked">Last Name:
+                        <ion-text color=danger>*</ion-text>
+                    </ion-label>
+                    <ion-input required type="text" placeholder="Enter Name"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="stacked">Email:
+                        <ion-text color=danger>*</ion-text>
+                    </ion-label>
+                    <ion-input required type="email" placeholder="Enter Email"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="stacked">Contact:
+                        <ion-text color=danger>*</ion-text>
+                    </ion-label>
+                    <ion-input required type="tel" placeholder="Enter Contact"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="stacked">Address
+                        <ion-text color=danger>*</ion-text>
+                    </ion-label>
+                    <ion-input placeholder="Address Line 1"></ion-input>
+                    <ion-input placeholder="Address Line 2"></ion-input>
+                    <ion-input placeholder="City"></ion-input>
+                    <ion-input placeholder="State"></ion-input>
+                    <ion-input placeholder="Zip Code"></ion-input>
+                </ion-item>
+
+
+                <ion-item>
+                    <ion-label position="stacked">Date of birth
+                        <ion-text color=danger>*</ion-text>
+                    </ion-label>
+                    <ion-datetime required value="1990-02-19" placeholder="Select Date"></ion-datetime>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="stacked">Date of birth
+                        <ion-text color=danger>*</ion-text>
+                    </ion-label>
+                    <ion-button (click)="showDatePicker()">
+                        Show Date Picker
+                    </ion-button>
+                    <h4>Date: {{myDate}}</h4>
+                </ion-item>
+
+                <button color="red" value="submit" class="btn">Submit</button>
+            </ion-list>
+        </form>
+    </div>
 </ion-content>
