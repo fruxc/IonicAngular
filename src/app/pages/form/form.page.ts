@@ -13,7 +13,12 @@ import { HomePage } from '../home/home.page';
 export class FormPage implements OnInit {
 
   myDate: string;
-  constructor( public actionSheetController: ActionSheetController, public alertController: AlertController, private datePicker: DatePicker, private router: Router) { }
+  constructor(
+    public actionSheetController: ActionSheetController,
+    public alertController: AlertController,
+    private datePicker: DatePicker,
+    private router: Router
+    ) { }
   ngOnInit() {
   }
 

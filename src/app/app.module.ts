@@ -6,7 +6,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
-import { FormPage } from '../app/form/form.page';
+import { FormPage } from './pages/form/form.page';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DatePicker } from '@ionic-native/date-picker/ngx';

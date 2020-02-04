@@ -9,8 +9,10 @@ import { Router } from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  constructor(public actionSheetController: ActionSheetController, private router: Router) {}
-
+  constructor(
+    public actionSheetController: ActionSheetController,
+    private router: Router
+    ) {}
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
       header: 'Cart',
