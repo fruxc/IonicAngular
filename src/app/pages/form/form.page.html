@@ -15,7 +15,7 @@
                     <ion-label position="stacked">First Name:
                         <ion-text color=danger>*</ion-text>
                     </ion-label>
-                    <ion-input required type="text" placeholder="Enter Name"></ion-input>
+                    <ion-input required [(ngModel)]="user.name" type="text" placeholder="Enter Name"></ion-input>
                 </ion-item>
 
                 <ion-item>
@@ -72,8 +72,10 @@
                     </ion-fab-button>
                 </ion-fab>
                 <br><br>
-                <ion-button value="cancel" (click)="presentAlertConfirm()">Cancel</ion-button>
-                <button color="red" value="submit" class="btn">Submit</button>
+                <div class="ion-align-items-center">
+                    <button color="red" value="submit" class="btn">Submit</button>
+                    <ion-button value="cancel" (click)="presentAlertConfirm()">Cancel</ion-button>
+                </div>
             </ion-list>
         </form>
     </div>

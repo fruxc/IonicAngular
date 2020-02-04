@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatePicker } from '@ionic-native/date-picker/ngx';
 import { ActionSheetController, AlertController } from '@ionic/angular';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 import { HomePage } from '../home/home.page';
 
 
@@ -11,7 +11,9 @@ import { HomePage } from '../home/home.page';
   styleUrls: ['./form.page.scss'],
 })
 export class FormPage implements OnInit {
-
+    user = {
+      name: '',
+    };
   myDate: string;
   constructor(
     public actionSheetController: ActionSheetController,
@@ -38,6 +40,12 @@ export class FormPage implements OnInit {
           text: 'Okay',
           handler: () => {
             console.log('Confirm Okay');
+            const navigationExtras: NavigationExtras = {
+              state: {
+                user: this.user
+              }
+            };
+            this.router.navigate(['details'], navigationExtras);
           }
         }
       ]
