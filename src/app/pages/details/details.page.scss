@@ -1,0 +1,37 @@
+@import "../form/form.page.scss";
+@mixin fontclass {
+    color: purple;
+    font-weight: bolder;
+}
+
+@mixin important-text {
+    color: red;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid blue;
+}
+
+$font-stack: Helvetica,
+sans-serif;
+$primary-color: green;
+.danger {
+    @include important-text;
+    background-color: $primary-color;
+}
+
+.fnt {
+    @include fontclass;
+}
+
+.button-report {
+    @extend .danger;
+    background-color: grey;
+}
+
+.fbtn {
+    @include cuts;
+}
+
+.fbtn:hover {
+    background-color: $bgcolor;
+}

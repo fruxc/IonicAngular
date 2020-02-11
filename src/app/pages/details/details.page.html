@@ -1,9 +1,64 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>details</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="home"></ion-back-button>
+        </ion-buttons>
+        <ion-title style="font-weight: lighter; color:purple;">
+            Details
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+    <ion-list>
+        <ion-item>
+            <ion-input>
+                <font class="fnt">First Name : </font> {{data.fname}}</ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input>
+                <font class="fnt">Last Name : </font> {{data.lname}}</ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input>
+                <font class="fnt">Email ID : </font> {{data.mail}}</ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input>
+                <font class="fnt">Phone : </font> {{data.phone}}</ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input>
+                <font class="fnt">Address 1 : </font> {{data.add1}}</ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input>
+                <font class="fnt">Address 2 : </font> {{data.add2}}</ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input>
+                <font class="fnt">City : </font> {{data.city}}</ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input>
+                <font class="fnt">State : </font> {{data.state}}</ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input>
+                <font class="fnt">Zipcode : </font> {{data.zip}}</ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input>
+                <font class="fnt">Date of Birth : </font> {{data.date}}</ion-input>
+        </ion-item>
+        <ion-item>
+            <button class="danger">Danger</button>
+        </ion-item>
+        <ion-item>
+            <button routerLink="/home" class="button-report">Router Link With Extend Sass</button>
+        </ion-item>
+        <ion-item>
+            <button class="fbtn">Import-Hover</button>
+        </ion-item>
+    </ion-list>
 </ion-content>

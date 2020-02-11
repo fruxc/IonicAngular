@@ -12,7 +12,16 @@ import { HomePage } from '../home/home.page';
 })
 export class FormPage implements OnInit {
     user = {
-      name: '',
+      fname: '',
+      lname: '',
+      mail: '',
+      phone: '',
+      add1: '',
+      add2: '',
+      city: '',
+      state: '',
+      zip: '',
+      date: '',
     };
   myDate: string;
   constructor(
@@ -27,7 +36,7 @@ export class FormPage implements OnInit {
   async presentAlertConfirm() {
     const alert = await this.alertController.create({
       header: 'Confirm!',
-      message: 'Do you really want to <strong>CANCEL</strong>???',
+      message: 'Do you really want to <strong>SUBMIT</strong>???',
       buttons: [
         {
           text: 'Cancel',

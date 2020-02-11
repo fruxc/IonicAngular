@@ -15,47 +15,39 @@
                     <ion-label position="stacked">First Name:
                         <ion-text color=danger>*</ion-text>
                     </ion-label>
-                    <ion-input required [(ngModel)]="user.name" type="text" placeholder="Enter Name"></ion-input>
+                    <ion-input required [ngModelOptions]="{standalone: true}" [(ngModel)]="user.fname" type="text" placeholder="Enter Name"></ion-input>
                 </ion-item>
 
                 <ion-item>
                     <ion-label position="stacked">Last Name:
                         <ion-text color=danger>*</ion-text>
                     </ion-label>
-                    <ion-input required type="text" placeholder="Enter Name"></ion-input>
+                    <ion-input required [ngModelOptions]="{standalone: true}" [(ngModel)]="user.lname" type="text" placeholder="Enter Name"></ion-input>
                 </ion-item>
 
                 <ion-item>
                     <ion-label position="stacked">Email:
                         <ion-text color=danger>*</ion-text>
                     </ion-label>
-                    <ion-input required type="email" placeholder="Enter Email"></ion-input>
+                    <ion-input required [ngModelOptions]="{standalone: true}" [(ngModel)]="user.mail" type="email" placeholder="Enter Email"></ion-input>
                 </ion-item>
 
                 <ion-item>
                     <ion-label position="stacked">Contact:
                         <ion-text color=danger>*</ion-text>
                     </ion-label>
-                    <ion-input required type="tel" placeholder="Enter Contact"></ion-input>
+                    <ion-input required [ngModelOptions]="{standalone: true}" [(ngModel)]="user.phone" type="tel" placeholder="Enter Contact"></ion-input>
                 </ion-item>
 
                 <ion-item>
                     <ion-label position="stacked">Address
                         <ion-text color=danger>*</ion-text>
                     </ion-label>
-                    <ion-input placeholder="Address Line 1"></ion-input>
-                    <ion-input placeholder="Address Line 2"></ion-input>
-                    <ion-input placeholder="City"></ion-input>
-                    <ion-input placeholder="State"></ion-input>
-                    <ion-input placeholder="Zip Code"></ion-input>
-                </ion-item>
-
-
-                <ion-item>
-                    <ion-label position="stacked">Date of birth
-                        <ion-text color=danger>*</ion-text>
-                    </ion-label>
-                    <ion-datetime required value="1990-02-19" placeholder="Select Date"></ion-datetime>
+                    <ion-input [ngModelOptions]="{standalone: true}" [(ngModel)]="user.add1" placeholder="Address Line 1"></ion-input>
+                    <ion-input [ngModelOptions]="{standalone: true}" [(ngModel)]="user.add2" placeholder="Address Line 2"></ion-input>
+                    <ion-input [ngModelOptions]="{standalone: true}" [(ngModel)]="user.city" placeholder="City"></ion-input>
+                    <ion-input [ngModelOptions]="{standalone: true}" [(ngModel)]="user.state" placeholder="State"></ion-input>
+                    <ion-input [ngModelOptions]="{standalone: true}" [(ngModel)]="user.zip" placeholder="Zip Code"></ion-input>
                 </ion-item>
 
                 <ion-item>
@@ -63,7 +55,7 @@
                     <ion-label position="stacked">Date of birth
                         <ion-text color=danger>*</ion-text>
                     </ion-label>
-                    <ion-input required type="date" (click)="showDatePicker()"></ion-input>
+                    <ion-input required [ngModelOptions]="{standalone: true}" [(ngModel)]="user.date" type="date" (click)="showDatePicker()"></ion-input>
                 </ion-item>
 
                 <ion-fab vertical="bottom" horizontal="end" slot="fixed">
@@ -73,8 +65,8 @@
                 </ion-fab>
                 <br><br>
                 <div class="ion-align-items-center">
-                    <button color="red" value="submit" class="btn">Submit</button>
-                    <ion-button value="cancel" (click)="presentAlertConfirm()">Cancel</ion-button>
+                    <button value="submit" (click)="presentAlertConfirm()" class="btn">Submit</button>
+                    <ion-button value="cancel">Cancel</ion-button>
                 </div>
             </ion-list>
         </form>
